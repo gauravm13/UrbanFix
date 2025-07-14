@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🏙️ UrbanFix – Spot and Share Civic Issues</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>🏙️ UrbanFix – Spot and Share Civic Issues</h1>
+  </header>
+  <main>
+    <section id="report-section">
+      <h2>Report an Issue</h2>
+      <div id="location-display">📍 Location: <span id="coords">--</span></div>
+      <button id="get-location">Get My Location</button>
+      <div id="canvas-area">
+        <canvas id="issue-canvas" width="480" height="200" style="width:100%;max-width:480px;"></canvas>
+        <div>
+          <button id="draw-pencil">✏️ Pencil</button>
+          <button id="draw-rect">⬛ Rectangle</button>
+          <button id="draw-undo">↩️ Undo</button>
+        </div>
+      </div>
+      <div id="tag-area">
+        <label>Tag Issue:</label>
+        <button class="tag-btn" data-tag="pothole">🕳️ Pothole</button>
+        <button class="tag-btn" data-tag="light">💡 Broken Light</button>
+        <button class="tag-btn" data-tag="garbage">🗑️ Garbage</button>
+        <button class="tag-btn" data-tag="other">❓ Other</button>
+      </div>
+      <textarea id="issue-desc" placeholder="Describe the issue..."></textarea>
+      <button id="submit-report">Submit Report</button>
+      <div id="save-status"></div>
+    </section>
+    <section id="community-section">
+      <h2>Community Reports</h2>
+      <div id="reports-list"></div>
+      <div id="load-more-trigger">⬇️ Scroll to load more reports...</div>
+    </section>
+  </main>
+  <script src="main.js"></script>
+</body>
+</html> 
